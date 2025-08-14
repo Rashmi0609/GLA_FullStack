@@ -16,12 +16,12 @@
 
         <input type="email" id="email"><br>
         <label for="age">age-</label><br>
-        
+
         <input type="number" id="age"><br>
         <label for="tel">phone no.</label><br>
-        
+
         <input type="tel" id="tel" placeholder="enter your telephone no." /><br>
-        
+
         <label for="">select your gender-</label><br>
         <input type="radio" name="gender" value="male" />male</br>
         <input type="radio" name="gender" value="female" />female</br>
@@ -32,16 +32,71 @@
         <input type="radio" name="branch" value="CSE">CSE<br>
         <input type="radio" name="branch" value="CSE">ECE<br>
         <input type="radio" name="branch" value="CSE">AIML<br>
-     </form>
+    </form><br>
 
-     <form>
-        <input type="text" />
-        <input type="button" value="registration" />
-        <input type="checkbox" name="" id="" />
-        <input type="data" name="" id="" />
-        <input type="file" />
-        <input type="hidden" name="" id="" />       
-     </form>
+    <form action="contact.html" method="get">
+        <fieldset>
+            <legend>Second Basic Form Basic</legend>
+            <input type="text" />
+            <input type="button" value="registration" />
+            <input type="checkbox" name="" id="" />
+            <input type="data" name="" id="" />
+            <input type="file" />
+            <input type="hidden" name="" id="" />
+
+            <label for="name">Name-</label>
+            <input type="text" id="name" required/></br>
+
+            <label for="email">Email-</label><br>
+            <input type="email" id="email" /></br>
+
+            <input type="radio" name="gender" />male
+            <input type="radio" name="gender" />female
+            <input type="radio" name="gender" />prefer not to say</br><br>
+
+            1- which html tag is used to define the largest heading?<br>
+            <input type="radio" name="question1" required value="h1">h1 tag</br>
+            <input type="radio" name="question1" value="h2">h6 tag</br>
+            <input type="radio" name="question1" value="h3">heading tag</br><br>
+
+            2-Select your hobbies:<br>
+            <input type="checkbox" name="hobbies" value="singing">Singing
+            <input type="checkbox" name="hobbies" value="dancing">Dancing
+            <input type="checkbox" name="hobbies" value="reading">Reading</br><br>
+
+            3-Select your favorite color:<br>
+            <input type="checkbox" name="color" value="red">Red <br>
+            <input type="checkbox" name="color" value="blue">Blue <br>
+            <input type="checkbox" name="color" value="green">Green</br><br>
+
+            4-Select your Branch:<br>
+            <input type="radio" name="branch" required value="CSE">CSE<br>
+            <input type="radio" name="branch" value="ECE">ECE<br>
+            <input type="radio" name="branch" value="AIML">AIML<br><br>
+
+            <label for="">Select Your State: </label>
+            <select name="state" id="state">
+                <option value="" disabled selected>choose a state</option>
+                <option value="up">U.P</option>
+                <option value="mp">M.P</option>
+                <option value="delhi">Delhi</option>
+            </select><br><br>
+
+            <label for="">Choose a Fruit: </label>
+            <select name="Fruit" id="Fruit">
+                <option value="" disabled selected>choose a fruit</option>
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="mango">Mango</option>
+            </select><br><br>
+
+            <label for="text">Please Give Your Feedback</label>
+            <textarea id="text" name="text" rows="4" cols="0" placeholder="Enter your feedback here..."></textarea><br><br>
+            <input type="submit" value="Submit" />
+
+        </fieldset>
+    </form>
+    
 </body>
 
 </html>

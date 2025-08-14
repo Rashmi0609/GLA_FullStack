@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Registration Form</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+            <label for="gender">Select Your Gender: </label><br>
+            <input type="radio" name="gender" required value="Gender">Male<br>
+            <input type="radio" name="gender" value="Gender">Female<br>
+            <input type="radio" name="gender" value="Gender">Not to Say<br><br>
+
+            <label for="">Select Your Course: </label>
+            <select name="Course" id="Course">
+                <option value="" disabled selected>choose a course</option>
+                <option value="CSE">CSE</option>
+                <option value="AIML">AIML</option>
+                <option value="IT">IT</option>
+            </select><br><br>
+
+            <label for="">Select Your Skills: </label>
+            <select name="skills" id="skills">
+                <option value="" disabled selected>choose a skill</option>
+                <option value="dancing">Dancing</option>
+                <option value="singing">Singing</option>
+                <option value="sports">Sports</option>
+            </select><br><br>
+
+            <label for="">Enter Your D.O.B: </label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
+</body>
+
+</html>
