@@ -1,0 +1,12 @@
+/* external CSS */
+h1{
+    font-style: italic;
+    font-size: 2em;
+    text-align: center;  
+}
+
+p{
+    font-size: 1.2em;
+    color: rgb(220, 160, 81);
+    text-align: justify;
+}
