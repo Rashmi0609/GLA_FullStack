@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <style>
+    * {
+        background-color: beige;
+    }
+
+    div {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        margin: 10px;
+    }
+
     h1 {
         color: red;
         font-size: 1em;
@@ -31,7 +42,7 @@
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-style: italic;
         text-align: justify;
-        text-shadow: 0cm 0cm 1cm rgba(0, 0, 0, 0.5);
+        text-shadow: 0cm 0cm 1cm rgba(0, 0, 0, 0.5);   /* a for transparency*/
         letter-spacing: 0.1em;
         background-color: rgb(255, 246, 235);
         padding: 20px;
@@ -47,6 +58,7 @@
         width: 300px;
         background-image: url(https://th.bing.com/th/id/R.19cb609eac7252a6938656f67bf9b698?rik=hj8poKkaRvIWfA&riu=http%3a%2f%2fcdn.wallpapersafari.com%2f23%2f12%2fgCG1cd.jpg&ehk=OZaHqtaWjWN8rCA1xXZlAvb1GcThBZlQHC1kC0WlA7s%3d&risl=&pid=ImgRaw&r=0);
         background-size: cover;
+        border-color: teal peru red fuchsia;
     }
 
     #second {
@@ -59,8 +71,19 @@
         height: 300px;
         width: 300px;
         background-image: url(https://th.bing.com/th/id/OIP.4g9-yIBm-G56rSlQAEFp6AHaE9?w=274&h=183&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3);
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: center;
+        border-radius: 20px;
+
+    }
+
+    .third {
+        display: block;
+    }
+
+    .fourth {
+        display: inline-block;
     }
 </style>
 
@@ -75,6 +98,11 @@
     <br>
     <div id="second">This is a div Element with id</div>
 
+    <h2>Display Properties</h2>
+    <h3>Block Elements</h3>
+    <div class="third">This is my div block</div>
+    <div class="fourth">This is my div block</div>
+    
 </body>
 
 </html>
