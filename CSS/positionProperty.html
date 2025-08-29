@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            height: 800px;
+        }
+
+        .box {
+            height: 150px;
+            width: 150px;
+        }
+
+        #first {
+            position: static;
+            top: 40px;
+            left: 40px;
+            border: 2px solid red;
+        }
+
+        #second {
+            position: relative;
+            /* positioned relative to its normal position */
+            top: 290px;
+            left: 40px;
+            border: 2px solid blue;
+        }
+
+        #third {
+            position: absolute;
+            /* positioned relative to nearest positioned ancestor */
+            top: 200px;
+            left: 40px;
+            border: 2px solid green;
+        }
+
+        #fourth {
+            position: fixed;
+            /* positioned relative to the viewport */
+            top: 100px;
+            left: 200px;
+            border: 2px solid orange;
+        }
+
+        #fifth {
+            position: sticky;
+            /* toggles between relative and fixed, based on scroll position */
+            top: 0px;
+            left: 100px;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Position Property</h1>
+    <div class="container">
+        <img src="image1.jpg" alt="first" class="box" id="first" />
+        <img src="image2.jpeg" alt="second" class="box" id="second" />
+        <img src="image3.jpeg" alt="third" class="box" id="third" />
+        <img src="image4.jpeg" alt="fourth" class="box" id="fourth" />
+        <img src="image5.jpg" alt="fourth" class="box" id="fifth" />
+    </div>
+    <div class="container2" style="height: 800px; border: 1px solid black;"></div>
+</body>
+
+</html>

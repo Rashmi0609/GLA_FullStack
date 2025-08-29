@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0px;
-            box-sizing: border-box; /* content-box | border-box */ /* to include padding and border in total width and height */ 
+            box-sizing: border-box;
+            /* content-box | border-box */
+            /* to include padding and border in total width and height */
             background-color: rgb(255, 255, 244);
-            
+
         }
-        div{
+
+        div {
             background-color: lightgoldenrodyellow;
             height: 200px;
             width: 200px;
             border-width: 2px 10px 5px 15px;
             border-style: solid;
-            border-color: blueviolet red green rgb(0, 242, 255) ;
+            border-color: blueviolet red green rgb(0, 242, 255);
             border-style: groove;
             margin: 10px;
             padding: 10px;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* horizontal vertical blur color */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            /* horizontal vertical blur color */
 
+        }
+        .first{
+            /* overflow: hidden; to hide overflow content */
+            overflow: scroll;
         }
     </style>
 </head>
+
 <body>
     <h1>Box Model</h1>
     <div class="container">This is my div element</div>
-    <div class="first">This is my second div element</div>
+    <div class="first">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta facilis distinctio soluta
+        dignissimos necessitatibus amet veniam nisi iusto repellat eius quidem perspiciatis, exercitationem rem, alias
+        culpa repudiandae officia earum voluptate, delectus quo. Praesentium totam assumenda placeat, consequatur facere
+        neque voluptatem quibusdam recusandae aperiam. Officiis, ut!</div>
 </body>
+
 </html>
