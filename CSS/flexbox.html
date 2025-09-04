@@ -15,8 +15,10 @@
             display: flex;
             flex-direction: row; 
             justify-content: center;
-            align-items: center;
-            gap: 20px;            
+            /* align-items: center; */
+            /* gap: 20px; */
+            /* flex-wrap: wrap; */
+            align-content: start;
         }
         .item{
             height: 100px;
@@ -27,15 +29,26 @@
         }
         #first{
             background-color: lightcoral;
+            flex-grow: 1; /* to make this item take more space */        
         }
         #second{
             background-color: lightseagreen;
+            order: 3; /* to change the order of flex items */
+            flex-basis: 200px; /* to make this item take more space */
+
         }
         #third{
             background-color: lightblue;
+            flex-grow: 2;
+            flex-basis: 150px;
+            align-self: center; /* to align this item differently from others */
+            
         }
         #fourth{
             background-color: lightgreen;
+            order: -1; /* to change the order of flex items */
+            flex-shrink: 3; /* to make this item shrink more */
+            flex: 2 3 200px; /* flex-grow flex-shrink flex-basis */
         }
         
     </style>
