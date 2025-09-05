@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            border: 2px solid black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: azure;
+            border: 1px solid black;
+            position: relative;
+            animation-name: rightMovement;
+            animation-duration: 6s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-delay: 4s;
+            animation-timing-function: ease-in-out;
+            /* ease-in, ease-out, linear, ease-in-out, cubic-bezier */
+            /* animation-fill-mode: forwards;  keeps the last frame of the animation */
+            animation-fill-mode: forwards;            
+
+        }
+
+        @keyframes rightMovement {
+            0% {
+                top: 0px;
+                left: 0px;
+                background-color: rgb(138, 8, 106);
+                border-radius: 0%;
+                transform: scale(1);
+
+            }
+
+            25% {
+                top: 600px;
+                left: 500px;
+                background-color: darkseagreen;
+                border-radius: 50%;
+            }
+
+            75% {
+                top: 0px;
+                left: 700px;
+                background-color: darkgoldenrod;
+                border-radius: 50%;
+            }
+
+            100% {
+                top: 0px;
+                left: 900px;
+                background-color: darkcyan;
+                border-radius: 50%;
+                transform: scale(1.5);
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
