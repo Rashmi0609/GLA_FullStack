@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: lightblue;
+            border: 1px solid black;
+            transition-property: all; /* which property you want to animate */
+            transition-duration: 6s;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); 
+        }
+        .box:hover{
+            background-color: lightcoral; /* when you hover over the box, the background color will change to lightcoral over a duration of 6 seconds */
+            height: 300px;
+            width: 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This is the transition property</div>
+</body>
+</html>
