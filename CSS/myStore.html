@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <style>
+        header {
+            background-color: rgb(8, 64, 64);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #eee;
+            padding: 20px;
+            border-right: 1px solid #ddd ;
+            
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
+
+        .main {
+            width: 80%;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            /* gap: 20px; */
+        }
+
+        .product {
+            background-color: whitesmoke;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgb(8, 64, 64);
+        }
+
+        .product h2 {
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #555;
+        }
+
+        .product button {
+            background-color: #3993d0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            cursor: pointer;
+        
+        }
+        .product img{
+            width: 100px;
+            height: 100px;
+        }
+        .product button:hover{
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>My Store</header>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li>Electronics</li>
+                <li>Fashion</li>
+                <li>Books</li>
+                <li>Home & Kitchen</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="product">
+                <img src="https://img.freepik.com/premium-photo/headphones_920207-9739.jpg" alt="">
+                <h2>Product 1</h2>
+                <p>This is a great product for your needs</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://wallpapers.com/images/hd/iphone-pictures-oor2sunc3v91o0vw.jpg" alt="">
+            <h2>Product 2</h2>
+            <p>This is a great product for your needs</p>
+            <button>Buy Now</button>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
