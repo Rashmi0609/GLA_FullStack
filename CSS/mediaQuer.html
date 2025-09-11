@@ -10,10 +10,14 @@
             width: 200px;
             background-color: rgb(127, 255, 212);
             border: 1px solid black;
+            margin: 20px auto;
         }
-        @media (max-width: 600px) {
+        @media (min-width:400px) and (max-width: 600px) {
             .box{
                 background-color: lightcoral;
+            }
+            body{
+                flex-direction: column;
             }
         }
     </style>
