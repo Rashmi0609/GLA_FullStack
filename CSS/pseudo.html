@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        button {
+            background-color: rgb(146, 33, 80);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: bisque;
+            height: 50px;
+            width: 100px;
+        }
+
+        button:hover {
+            background-color: rgb(5, 74, 76);
+        }
+
+        button:active {
+            background-color: lightcoral;
+        }
+
+        button:focus {
+            outline: 3px solid orange;
+            outline: none;
+            /* To remove the default outline */
+        }
+
+        input:focus {
+            outline: 3px solid orange;
+            outline: none;
+            /* To remove the default outline */
+        }
+
+        a:hover {
+            color: red;
+            /* Change color on hover */
+        }
+
+        a:visited {
+            color: purple;
+            /* Change color if the link has been visited */
+        }
+
+        a:active {
+            color: blue;
+            /* Change color when the link is being clicked */
+        }
+
+        a:link {
+            color: green;
+            /* Change color of unvisited link */
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        ul li:nth-child(even) {
+            background-color: lightblue;
+        }
+
+        ul li:hover {
+            background-color: rgb(189, 162, 78);
+        }
+
+        ul li:last-child {
+            font-weight: bold;
+            color: red;
+            background-color: rgb(255, 157, 172);
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Hower Effects</h2>
+    <button>Click me</button>
+    <input type="text" placeholder="Click here to focus">
+    <a href="https://www.google.com" target="_blank">Click Bank</a>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+
+</html>
