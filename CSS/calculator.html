@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator UI</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #a8edea, #fed6e3);
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            width: 240px;
+        }
+
+        .display {
+            background: #ffe8c2;
+            height: 50px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #d6dde3;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .buttons button:hover {
+            background: #c1c8ce;
+        }
+
+        .buttons .equal {
+            grid-column: span 2;
+            background: #4caf50;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .buttons .equal:hover {
+            background: #43a047;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display">0</div>
+        <div class="buttons">
+            <button>C</button>
+            <button>⌫</button>
+            <button>%</button>
+            <button>÷</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>×</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>−</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+
+            <button>0</button>
+            <button>.</button>
+            <button class="equal">=</button>
+        </div>
+    </div>
+</body>
+
+</html>
