@@ -32,3 +32,11 @@ else{
     console.log(`${z} is the largest number`);
 }
 
+let c=["apple","mango","banana","orange"]
+c[0] // access element at index 0
+c[3] // access element at index 3
+console.log(c[0]); 
+console.log(c[3]);
+for(let i=0;i<3;i++){
+    console.log(c[i]);
+}
