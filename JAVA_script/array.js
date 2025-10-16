@@ -40,3 +40,25 @@ console.log(students);
 
 students.splice(2,0,"Sakshi","Ankita"); // adds elements at index 2
 console.log(students);
+
+/* TASK:
+let team=["kamal","aman","priya"]
+1- add neha an vivek at the end
+2- in start add sonia
+3- replace an element at second position and add karan
+4- reamove last member
+5- print final team
+*/
+console.log("-----TASK-----");
+let team=["kamal","aman","priya"]
+team.push("neha","vivek");
+console.log(team);
+team.unshift("sonia");  
+console.log(team);
+team.splice(1,1,"karan");
+console.log(team);
+team.pop();
+console.log(team);
+console.log("Final Team: ",team);
+
+
