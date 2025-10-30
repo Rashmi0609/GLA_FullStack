@@ -43,4 +43,14 @@ for (let i=0; i<5; i++){
     console.log(i);
 }
 
+function greet4(name){
+    console.log(`Hello, ${name}`);
+}
+function processGreet(name,callback){
+    callback(name);
+}
+processGreet("Rashmi",greet4);
+
+
+
 
