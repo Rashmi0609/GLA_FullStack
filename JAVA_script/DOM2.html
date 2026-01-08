@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: aqua;
+            border: 1px solid black;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is a DOM Exercise</h2>
+    <p id="paragraph">This is my First Paragraph</p>
+    <button id="btn1" onclick="changeText()">click me</button>
+    <p id="paragraph2">This is my Second Paragraph</p>
+    <h2 id="heading">Original Heading</h2>
+    <button onclick="changeText()">Click Me</button>
+
+    <div id="demo">
+        Hello <span style="display: none;">Hidden</span> World
+    </div>
+
+    <p id="paragraph1">This is a paragraph</p>
+    <button id="btn2">click me</button>
+
+    <script>
+        let para = document.getElementById("paragraph");
+        let button1 = document.getElementById("btn1");
+        let para2 = document.getElementById("paragraph2");
+        // button1.onclick=function(){
+        //     para.textContent="You have clicked the button";
+        // }
+        function changeText() {
+            para.innerText = `${para.innerText} Text changed after clicking the button`; // innerText vs textContent: innerText considers styling and hidden elements, textContent does not.
+            para2.innerHTML = `<h2> Text changed using innerHTML...</h2>`; // innerHTML allows HTML tags to be rendered, textContent treats them as plain text.
+        }
+
+        function changeText() {
+            document.getElementById("heading").textContent = "DOM Manipulation in Action";
+        }
+    </script>
+
+    <script>
+        const el=document.getElementById("demo");
+        console.log(el.innerHTML); // Hello <span style="display: none;">Hidden</span> World
+        console.log(el.textContent); // Hello  World
+        console.log(el.innerText); // Hello World (hidden span is not considered)
+    </script>
+
+    <script>
+        let paragraph1 = document.getElementById("paragraph1");
+        let button2 = document.getElementById("btn2");
+        button2.onclick = function () {
+            paragraph1.style.color = "red";
+            paragraph1.style.fontSize = "20px";
+            paragraph1.style.backgroundColor = "yellow";
+            paragraph1.setAttribute("class", "highlight");
+            paragraph1.classList.add("active"); 
+            paragraph1.classList.add("active2"); 
+
+        }
+    </script>
+        
+
+</body>
+</html>
