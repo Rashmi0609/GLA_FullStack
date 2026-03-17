@@ -12,7 +12,7 @@ app.get('/products',(req,res)=>{
 });
 
 //POST METHOD
-app.get('/addProduct',(req,res)=>{
+app.get('/addProduct',(req,res)=>{  
     res.render("addProduct");
 });
 
