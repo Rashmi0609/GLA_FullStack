@@ -1,10 +1,12 @@
 let express=require('express');
 const bodyParser = require('body-parser');
+let meathodoveride=require('method-override');
 let path=require('path');
 let app=express();
 app.set('view engine','ejs');  
 app.set('views', path.join(__dirname,'prod_views'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 let products=["laptop","mobile","tablet","headphones"];
 app.get('/products',(req,res)=>{
@@ -31,6 +33,15 @@ app.get('/submit',(req,res)=>{
     console.log(req.query);
     products.push(req.query.p_name);
     res.redirect("/products");
+});
+
+app.get('/product/:id',(req,res)=>{
+    console.log(p);
+    res.render("show",{p});
+});
+
+app.get('/product/:id/edit',(req,res)=>{
+    let e=Products.fil
 });
 
 app.listen(3000,()=>{
