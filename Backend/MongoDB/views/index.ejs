@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+
+<h1>List of Products</h1>
+
+<article>
+    <% p.map((data) => { %>
+
+        <img src="<%= data.img %>" height="200" width="200">
+
+        <h3>Name: <%= data.name %></h3>
+        <h4>Price: <%= data.price %></h4>
+        <p>Description: <%= data.description %></p>
+
+        <button><a href="/product/<%= data._id %>">Show</a></button>
+        <button><a href="/product/<%= data._id %>/edit">Edit</a></button>
+        <button><a href="/product/<%= data._id %>/delete">Delete</a></button>
+
+        <hr>
+
+    <% }) %>
+</article>
+
+</body>
+</html>
