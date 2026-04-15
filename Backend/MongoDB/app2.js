@@ -7,6 +7,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 let path = require('path');
 let bcrypt = require('bcrypt');
 
+const methodOverride = require('method-override'); 
+app.use(methodOverride('_method')); 
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -27,7 +30,6 @@ app.get('/register', (req, res) => {
 app.post('/register', (req, res) => {
     let { Uname, Upass } = req.body;
 
-    // ✅ FIX: hash password (not username)
     bcrypt.hash(Upass, 10, async (err, hash) => {
         let e = new employe({
             empName: Uname,
@@ -53,11 +55,21 @@ mongoose.connect("mongodb://127.0.0.1:27017/3rd_yr")
 
 
 // ================= PRODUCTS =================
-app.get('/products', async (req, res) => {
-    let data = await product.find({});
-    console.log(data);
 
-    res.render('index', { p: data }); // keeping p for EJS
+//  Show ALL products 
+app.get('/products', async (req, res) => {
+    let data = await product.find();
+    res.render('products', { data }); // create products.ejs
+});
+
+//  Show ONE product
+app.get('/products/:id', async (req, res) => {
+    let id = req.params.id;
+
+    let data = await product.findById(id);
+
+    console.log(data);
+    res.render('index', { p: data });
 });
 
 
@@ -66,7 +78,7 @@ async function seeddb() {
     await product.insertMany(p);
     console.log('Data seeded successfully');
 }
-seeddb(); // kept same
+seeddb();
 
 
 // ================= FORM =================
@@ -80,26 +92,61 @@ app.post('/product/form', async (req, res) => {
 
     let { Pname, Pprice, Pimg, Pdesc } = req.body;
 
-    let p = new product({
+    let newProduct = new product({
         name: Pname,
         price: Pprice,
         img: Pimg,
         description: Pdesc
     });
 
-    await p.save();
+    await newProduct.save();
     res.redirect('/products');
 });
 
 
+// ================= EDIT =================
+app.get('/product/:id/edit', async (req, res) => {
+    let id = req.params.id;
+
+    let e = await product.findById(id);
+
+    console.log(e);
+    res.render('edit', { e });
+});
+
+
 // ================= UPDATE =================
+app.put('/product/:id', async (req, res) => {
+    let { id } = req.params;
+    let { name, Eprice, Eimg, Erating } = req.body;
+
+    await product.findByIdAndUpdate(id, {
+        name: name,
+        price: Eprice,
+        img: Eimg,
+        rating: Erating
+    });
+    console.log('Product updated successfully !!!');
+    res.redirect('/products');
+});
+
+
+// ================= DELETE (BONUS) =================
+app.delete('/product/:id', async (req, res) => {
+    let { id } = req.params;
+    await product.findByIdAndDelete(id);
+    res.redirect('/products');
+});
+
+
+// ================= UPDATE (EMPLOYEE) =================
 async function update() {
     await employe.updateMany(
         { empName: 'rashmi' },
         { $set: { empName: 'Rashmi' } }
     );
 }
-update(); // kept same
+update();
 
 
 // ================= SERVER =================

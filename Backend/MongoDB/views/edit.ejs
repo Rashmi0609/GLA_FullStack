@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product</title>
+</head>
+<body>
+
+    <h1>Edit Product Details</h1>
+
+    <form action="/product/<%= e._id %>?_method=PUT" method="POST">
+
+        <label>Product Name</label>
+        <input type="text" name="name" value="<%= e.name %>">
+        <br><br>
+
+        <label>Price</label>
+        <input type="number" name="Eprice" value="<%= e.price %>">
+        <br><br>
+
+        <label>Image</label>
+        <input type="text" name="Eimg" value="<%= e.img %>">
+        <br><br>
+
+        <label>Rating</label>
+        <input type="number" name="Erating" value="<%= e.rating %>">
+        <br><br>
+
+        <button type="submit">Update Product</button>
+    </form>
+
+</body>
+</html>
